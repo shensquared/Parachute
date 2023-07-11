@@ -6,6 +6,7 @@ import {
 } from "next-auth";
 import Auth0Provider from "next-auth/providers/auth0";
 import GoogleProvider from "next-auth/providers/google";
+import GitlabProvider from "next-auth/providers/gitlab";
 import EmailProvider from "next-auth/providers/email";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "../env.mjs";
@@ -40,6 +41,7 @@ declare module "next-auth" {
  * @see https://next-auth.js.org/configuration/options
  **/
 export const authOptions: NextAuthOptions = {
+  debug: true,
   callbacks: {
     session({ session, user }) {
       if (session.user) {
@@ -67,7 +69,29 @@ export const authOptions: NextAuthOptions = {
     Auth0Provider({
       clientId: env.AUTH0_CLIENT_ID,
       clientSecret: env.AUTH0_CLIENT_SECRET,
-      issuer: process.env.AUTH0_ISSUER,
+    // https://github.com/nextauthjs/next-auth/discussions/4516
+    // https://github.com/nextauthjs/next-auth/issues/3830
+    GitlabProvider({
+      clientId: env.GITLAB_CLIENTID,
+      clientSecret: env.GITLAB_SECRET,
+      authorization:
+        "https://shenshen.mit.edu/git/oauth/authorize?scope=read_user",
+      userinfo: "https://shenshen.mit.edu/git/api/v4/user",
+      token: {
+        url: "https://shenshen.mit.edu/git/oauth/token",
+        async request(ctx) {
+          const { client, provider, params, checks } = ctx;
+          const tokens = await client.oauthCallback(
+            provider.callbackUrl,
+            params,
+            checks
+          );
+          if (tokens.created_at) {
+            delete tokens.created_at;
+          }
+          return { tokens };
+        },
+      },
     }),
     EmailProvider({
       server: {
