@@ -18,7 +18,7 @@ const LoginButton: React.FC<ButtonProps> = ({
   const getLogo = () => {
     switch (logo) {
       case 'mit':
-        return (<svg version="1.1" id="Layer_1" x="0px" y="0px" width="72px" height="38px" viewBox="0 0 72 38" enable-background="new 0 0 72 38" role="img" aria-labelledby="title"><g>
+        return (<svg version="1.1" id="Layer_1" x="0px" y="0px" width="72px" height="38px" viewBox="0 0 72 38" role="img" aria-labelledby="title"><g>
           <rect x="52" fill="#A41F35" width="20" height="8"/>
           <rect x="13" fill="#A41F35" width="8" height="26"/>
           <rect x="26" fill="#A41F35" width="8" height="38"/>
