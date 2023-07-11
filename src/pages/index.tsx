@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       
         <div
           ref={ref}
-          className="bg-colorful drop-shadow-pink h-[450px] w-full rounded-[8px] p-[2px] sm:max-w-[350px]"
+          className="bg-colorful drop-shadow-pink h-[450px] w-full rounded-[8px] p-[2px] sm:max-w-[450px]"
           style={
             {
               "--colorful-bg-degree": `${angle - 90}deg`,
