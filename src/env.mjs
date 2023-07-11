@@ -22,6 +22,8 @@ const server = z.object({
   // Add `.min(1) on ID and SECRET if you want to make sure they're not empty
   GOOGLE_ID: z.string(),
   GOOGLE_SECRET: z.string(),
+  GITLAB_CLIENTID: z.string(),
+  GITLAB_SECRET: z.string(),
   AUTH0_CLIENT_ID: z.string(),
   AUTH0_CLIENT_SECRET: z.string(),
   AUTH0_ISSUER: z.string(),
@@ -29,7 +31,7 @@ const server = z.object({
   EMAIL_SERVER_PASSWORD: z.string(),
   EMAIL_SERVER_HOST: z.string(),
   EMAIL_SERVER_PORT: z.string(),
-  EMAIL_FROM: z.string()
+  EMAIL_FROM: z.string(),
 });
 
 /**
@@ -51,6 +53,8 @@ const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
   NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+  GITLAB_CLIENTID: process.env.GITLAB_CLIENTID,
+  GITLAB_SECRET: process.env.GITLAB_SECRET,
   GOOGLE_ID: process.env.GOOGLE_ID,
   GOOGLE_SECRET: process.env.GOOGLE_SECRET,
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
@@ -61,7 +65,7 @@ const processEnv = {
   EMAIL_SERVER_PASSWORD: process.env.EMAIL_SERVER_PASSWORD,
   EMAIL_SERVER_HOST: process.env.EMAIL_SERVER_HOST,
   EMAIL_SERVER_PORT: process.env.EMAIL_SERVER_PORT,
-  EMAIL_FROM: process.env.EMAIL_FROM
+  EMAIL_FROM: process.env.EMAIL_FROM,
 };
 
 // Don't touch the part below
