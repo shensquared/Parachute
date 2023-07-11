@@ -36,10 +36,10 @@ const StartNewEventSection = () => {
   >("DAYSOFWEEK");
   const [selectedDays, setSelectedDays] = React.useState<Date[]>([]);
   const [startTime, setStartTime] = React.useState<Date>(
-    makeTime(0, 8, 0, timeZoneTag)
+    makeTime(0, 11, 0, timeZoneTag)
   );
   const [endTime, setEndTime] = React.useState<Date>(
-    makeTime(0, 22, 0, timeZoneTag)
+    makeTime(0, 20, 0, timeZoneTag)
   );
 
   // <<< Form values <<<

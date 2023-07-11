@@ -69,7 +69,7 @@ const Navbar = () => {
             className="max-w-[140px] grow cursor-pointer text-2xl font-bold md:text-3xl"
             href={session ? "/dashboard" : "/"}
           >
-            Parachute
+            📅 When2Meet
           </Link>
         </div>
         {session && (
