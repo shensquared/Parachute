@@ -19,7 +19,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <main className={`${inter.variable} font-inter`}>
-      <SessionProvider session={session} basePath='/when2meet/api/auth'>
+      <SessionProvider session={session} basePath='/w2m/api/auth'>
         <Component {...pageProps} />
       </SessionProvider>
     </main>

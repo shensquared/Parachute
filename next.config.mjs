@@ -8,8 +8,8 @@
 
 /** @type {import("next").NextConfig} */
 const config = {
-  basePath: "/when2meet",
-  assetPrefix: "https://shenshen.mit.edu/when2meet",
+  basePath: "/w2m",
+  assetPrefix: "https://shenshen.mit.edu/w2m",
 
   reactStrictMode: true,
 

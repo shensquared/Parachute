@@ -41,7 +41,7 @@ export const api = createTRPCNext<AppRouter>({
             (opts.direction === "down" && opts.result instanceof Error),
         }),
         httpBatchLink({
-          url: `${getBaseUrl()}/when2meet/api/trpc`,
+          url: `${getBaseUrl()}/w2m/api/trpc`,
         }),
       ],
     };
