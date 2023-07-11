@@ -12,13 +12,14 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+// https://stackoverflow.com/questions/70717224/how-to-define-a-custom-base-path-when-nextauth-url-doesnt-work
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
     <main className={`${inter.variable} font-inter`}>
-      <SessionProvider session={session}>
+      <SessionProvider session={session} basePath='/when2meet/api/auth'>
         <Component {...pageProps} />
       </SessionProvider>
     </main>

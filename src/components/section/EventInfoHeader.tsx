@@ -94,7 +94,7 @@ export const EventInfoHeader: React.FC = () => {
             </p>
             <p>
               <span className="font-bold">Link:</span>{" "}
-              https://parachute.fyi/event/{eventId}
+              https://shenshen.mit.edu/when2meet/event/{eventId}
             </p>
           </div>
         </div>
