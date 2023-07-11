@@ -1,7 +1,7 @@
 import React from "react";
 import { MdOutlineAccessTime, MdOutlineCalendarToday } from "react-icons/md";
 import { HiOutlineGlobe } from "react-icons/hi";
-import { Auth0LoginButton, GoogleLoginButton } from "../ui/LoginButton";
+import { Auth0LoginButton, GitlabLoginButton, GoogleLoginButton } from "../ui/LoginButton";
 import { useRouter } from "next/router";
 import { useEvent } from "../../utils/api-hooks";
 import {
@@ -75,8 +75,9 @@ export const LogInCard: React.FC = () => {
               <div className="mb-2 text-sm text-gray-500">
                 Sign in to join event
               </div>
-              <GoogleLoginButton />
               <Auth0LoginButton />
+              <GitlabLoginButton/>
+              <GoogleLoginButton />
             </div>
           </div>
         </div>

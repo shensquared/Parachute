@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import { LogInCard } from "../../components/section/LogInCard";
 import { EventInfoHeader } from "../../components/section/EventInfoHeader";
 import { OperationCard } from "../../components/section/OperationCard";
-import Footer from "../../components/section/Footer";
 import { ScreenLoading } from "../../components/ui/ScreenLoading";
 import { PrismaClient } from "@prisma/client";
 
@@ -49,7 +48,6 @@ const EventPage: NextPage = () => {
       <div className="flex min-h-screen w-screen flex-col">
         <Navbar />
         <LogInCard />
-        <Footer />
       </div>
     );
   }
@@ -59,7 +57,6 @@ const EventPage: NextPage = () => {
       <Navbar />
       <EventInfoHeader />
       <OperationCard />
-      <Footer />
     </div>
   );
 };
