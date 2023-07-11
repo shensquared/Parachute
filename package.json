@@ -6,6 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "postinstall": "prisma generate",
+    "dbreset": "prisma migrate reset",
+    "dbpush": "prisma db push",
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
     "start": "next start"
