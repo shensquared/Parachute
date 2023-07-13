@@ -47,7 +47,7 @@ const NavButton: React.FC<NavButtonProps> = ({
 
 const Navbar = () => {
   const { data: session } = useSession();
-  const image = session?.user.image as string;
+  const image = session?.user.image as string || "https://shenshen.mit.edu/assets/img/widetim.png";
   const name = session?.user.name;
   const email = session?.user.email;
 
@@ -71,12 +71,12 @@ const Navbar = () => {
             📅 When2Meet
           </Link>
           <div className="pl-10">
-          (in beta for my personal use. please lmk of bugs and requests <Link
-            className="max-w-[140px] grow cursor-pointer underline text-blue-600" 
-            href="https://github.com/shensquared/when2meet">
-            here
-          </Link>
-          . 🙏 thank you!)
+            (in beta for my personal use. please lmk of bugs and requests <Link
+              className="max-w-[140px] grow cursor-pointer underline text-blue-600"
+              href="https://github.com/shensquared/when2meet">
+              here
+            </Link>
+            . 🙏 thank you!)
           </div>
         </div>
         {session && (
