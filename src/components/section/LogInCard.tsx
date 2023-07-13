@@ -71,13 +71,13 @@ export const LogInCard: React.FC = () => {
             </div>
           )}
           <div className="flex h-full w-full flex-row items-center justify-center pb-7">
-            <div className="flex w-full max-w-[350px] flex-col items-center justify-center gap-3 p-8">
+            <div className="flex w-full max-w-[450px] flex-col items-center justify-center gap-3 p-8">
               <div className="mb-2 text-sm text-gray-500">
                 Sign in to join event
               </div>
-              <Auth0LoginButton />
-              <GitlabLoginButton/>
               <GoogleLoginButton />
+              <GitlabLoginButton/>
+              <Auth0LoginButton />
             </div>
           </div>
         </div>

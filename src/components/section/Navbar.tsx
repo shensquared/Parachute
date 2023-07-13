@@ -67,10 +67,17 @@ const Navbar = () => {
         <div className="grow">
           <Link
             className="max-w-[140px] grow cursor-pointer text-2xl font-bold md:text-3xl"
-            href={session ? "/dashboard" : "/"}
-          >
+            href={session ? "/dashboard" : "/"}>
             📅 When2Meet
           </Link>
+          <div className="pl-10">
+          (in beta for my personal use. please lmk of bugs and requests <Link
+            className="max-w-[140px] grow cursor-pointer underline text-blue-600" 
+            href="https://github.com/shensquared/when2meet">
+            here
+          </Link>
+          . 🙏 thank you!)
+          </div>
         </div>
         {session && (
           <OnHover

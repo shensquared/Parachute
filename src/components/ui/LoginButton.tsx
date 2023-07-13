@@ -1,7 +1,7 @@
 import React from "react";
 import { signIn } from "next-auth/react";
 import { FcGoogle} from "react-icons/fc";
-import { SiGitlab } from "react-icons/si";
+import { IoLogoGitlab } from "react-icons/io5";
 
 
 interface ButtonProps {
@@ -18,7 +18,7 @@ const LoginButton: React.FC<ButtonProps> = ({
   const getLogo = () => {
     switch (logo) {
       case 'mit':
-        return (<svg version="1.1" id="Layer_1" x="0px" y="0px" width="72px" height="38px" viewBox="0 0 72 38" role="img" aria-labelledby="title"><g>
+        return (<svg version="1.1" id="Layer_1" x="0px" y="0px" width="60.6px" height="32px" viewBox="0 0 72 38" role="img" aria-labelledby="title"><g>
           <rect x="52" fill="#A41F35" width="20" height="8"/>
           <rect x="13" fill="#A41F35" width="8" height="26"/>
           <rect x="26" fill="#A41F35" width="8" height="38"/>
@@ -29,7 +29,7 @@ const LoginButton: React.FC<ButtonProps> = ({
         </g>
         </svg>);
       case 'gitlab':
-        return <SiGitlab className="h-8 w-8"/>;
+      return <IoLogoGitlab className="h-8 w-8"/>;
       case 'google':
         return <FcGoogle className="h-8 w-8"/>;
       default:
@@ -43,8 +43,7 @@ const LoginButton: React.FC<ButtonProps> = ({
         "flex w-full flex-row items-center justify-center gap-5 rounded-lg border-2 p-3 text-left font-semibold"
       }
     >
-
-      {getLogo()}
+    {getLogo()}
     <div>{buttonText}</div>
     </button>
   );
@@ -62,7 +61,7 @@ export const Auth0LoginButton = () => {
               : window.location.href,
         })
       }
-      buttonText="Sign in with Kerb"
+      buttonText="Sign in with Kerberos"
       logo="mit"
     />
   );
@@ -79,11 +78,13 @@ export const GitlabLoginButton = () => {
               : window.location.href,
         })
       }
-      buttonText="Sign in with Gitlab"
+      buttonText="Sign in with self-hosted Gitlab"
       logo="gitlab"
     />
   );
 };
+
+
 export const GoogleLoginButton = () => {
   return (
     <LoginButton
