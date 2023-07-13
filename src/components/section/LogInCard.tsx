@@ -31,10 +31,10 @@ export const LogInCard: React.FC = () => {
                 <div>
                   {event
                     ? formatOccurring(
-                        occurringDaysArray ?? [],
-                        event.type === "DAYSOFWEEK",
-                        event.timeZone
-                      )
+                      occurringDaysArray ?? [],
+                      event.type === "DAYSOFWEEK",
+                      event.timeZone
+                    )
                     : "Loading..."}
                 </div>
                 <MdOutlineAccessTime className="ml-1" />
@@ -75,9 +75,9 @@ export const LogInCard: React.FC = () => {
               <div className="mb-2 text-sm text-gray-500">
                 Sign in to join event
               </div>
-              <GoogleLoginButton />
-              <GitlabLoginButton/>
               <Auth0LoginButton />
+              <GoogleLoginButton />
+              <GitlabLoginButton />
             </div>
           </div>
         </div>

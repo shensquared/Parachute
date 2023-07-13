@@ -32,11 +32,11 @@ const Home: NextPage = () => {
   const { angle, ref } = useElementMouseRelativeAngle();
 
   return (
-    
+
     <div className="flex h-screen w-screen flex-col">
       <Navbar />
       <div className="flex w-screen grow flex-col items-center justify-center gap-16 p-12 md:flex-row xl:gap-32">
-      
+
         <div
           ref={ref}
           className="bg-colorful drop-shadow-pink h-[450px] w-full rounded-[8px] p-[2px] sm:max-w-[450px]"
@@ -49,9 +49,9 @@ const Home: NextPage = () => {
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-[6px] bg-white p-8">
             <div className="mb-2 text-sm text-gray-500">
             </div>
+            <Auth0LoginButton />
             <GoogleLoginButton />
             <GitlabLoginButton />
-            <Auth0LoginButton />
           </div>
         </div>
       </div>
