@@ -69,6 +69,9 @@ export const authOptions: NextAuthOptions = {
     Auth0Provider({
       clientId: env.AUTH0_CLIENT_ID,
       clientSecret: env.AUTH0_CLIENT_SECRET,
+      // checks: ["none"],
+    }),
+
     // https://github.com/nextauthjs/next-auth/discussions/4516
     // https://github.com/nextauthjs/next-auth/issues/3830
     GitlabProvider({
