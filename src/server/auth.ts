@@ -7,7 +7,7 @@ import {
 import Auth0Provider from "next-auth/providers/auth0";
 import GoogleProvider from "next-auth/providers/google";
 import GitlabProvider from "next-auth/providers/gitlab";
-import EmailProvider from "next-auth/providers/email";
+
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "../env.mjs";
 import { prisma } from "./db";
