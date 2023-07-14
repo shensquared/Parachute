@@ -75,8 +75,8 @@ export const LogInCard: React.FC = () => {
               <div className="mb-2 text-sm text-gray-500">
                 Sign in to join event
               </div>
-              <Auth0LoginButton />
               <GoogleLoginButton />
+              <Auth0LoginButton />
               <GitlabLoginButton />
             </div>
           </div>

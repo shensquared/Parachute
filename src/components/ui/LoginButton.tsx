@@ -67,7 +67,7 @@ export const Auth0LoginButton = () => {
               : window.location.href,
         })
       }
-      buttonText="Sign in with Kerberos"
+      buttonText="Sign in with Kerb (slow)"
       logo="mit"
     />
   );
