@@ -67,12 +67,11 @@ export const Auth0LoginButton = () => {
               : window.location.href,
         })
       }
-      buttonText="Sign in with Kerb (slow)"
+      buttonText="Sign in with Kerberos"
       logo="mit"
     />
   );
 };
-
 export const GitlabLoginButton = () => {
   return (
     <LoginButton
