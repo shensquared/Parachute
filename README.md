@@ -1,8 +1,4 @@
-# Parachute.fyi - when2meet alternative
-
-## Introduction
-
-🪂 Parachute.fyi is an open-sourced web-based scheduling application built with modern frameworks. It integrates modern user interface and login mechanism, thus offering way better experience than when2meet.com.
+# This repo is archived (moved to a different infastrucure https://w2m.shenshen.mit.edu)
 
 ## Key Features
 
